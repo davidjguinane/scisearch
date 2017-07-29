@@ -1,0 +1,64 @@
+{% extends "scisearch/base.html" %}
+{% load static %}
+{% block title %}
+{% endblock %}
+{% block meta %}
+{% endblock %}
+{% block script %}
+{% endblock %}
+{% block fab %}
+{% endblock %}
+{% block header %}
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title"><i class="material-icons">school</i><span style="font-size: 24px;"> SciSearch</span></span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="{% url 'query:home' %}">Home</a>
+          <a class="mdl-navigation__link" href="">Research Fields</a>
+          <a class="mdl-navigation__link" href="">Research Centres</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Scisearch</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="{% url 'query:home' %}">Home</a>
+        <a class="mdl-navigation__link" href="">Research Fields</a>
+        <a class="mdl-navigation__link" href="">Research Centres</a>
+      </nav>
+    </div>
+  {% endblock %}
+  {% block content %}
+    <section class="mdl-section">
+      <div class="mdl-grid mdl-layout__centered">
+        <div class="mdl-cell--12-col">
+          <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">{{ centrename }} ({{ abbreviation }})</h2>
+            </div>
+            <div id="infocard" class="mdl-card__supporting-text">
+              <span style="font-weight: 700;">Address</span>
+              <p>{{ address }}</p>
+              <span style="font-weight: 700;">Website</span>
+              <p><a href="{{ weblink }}">{{ weblink }}</a></p>
+            <span style="font-weight: 700;">Overview</b></p>
+            <p> {{ overview }}</p>
+            <span style="font-weight: 700;">Facilities & Major Equipment</span>
+            <p>{{ facilities }}</p>
+            <span style="font-weight: 700;">Key Science Sectors</span>
+            <p> </p>
+            <span style="font-weight: 700;">Research Staff</span>
+            <p> </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endblock %}
+  {% block footer %}
+  {% endblock %}

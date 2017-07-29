@@ -24,7 +24,7 @@ $( document ).ready(function() {
     });
 
    function start_loader() {
-       $('#loadbar').css( "display", "block" );
+       $('#loadbar').css( "display", "block" )
    }
 
    function end_loader() {
@@ -47,6 +47,7 @@ $( document ).ready(function() {
             },
             beforeSend: function(xhrObj){
                 start_loader()
+                hide_text()
             },
 			success: function(data){
                 console.log(data)

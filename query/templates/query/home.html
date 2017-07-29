@@ -14,12 +14,12 @@
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="mdl-layout-title"><i class="material-icons">school</i> Scisearch</span>
+        <span class="mdl-layout-title"><i class="material-icons">school</i><span style="font-size: 24px;"> SciSearch</span></span>
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" href="">Home</a>
+           <a class="mdl-navigation__link" href="{% url 'query:home' %}">Home</a>
           <a class="mdl-navigation__link" href="">Research Fields</a>
           <a class="mdl-navigation__link" href="">Research Centres</a>
         </nav>
@@ -28,7 +28,7 @@
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">Scisearch</span>
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Home</a>
+         <a class="mdl-navigation__link" href="{% url 'query:home' %}">Home</a>
         <a class="mdl-navigation__link" href="">Research Fields</a>
         <a class="mdl-navigation__link" href="">Research Centres</a>
       </nav>
@@ -63,8 +63,11 @@
           </tr>
           <tr>
             <td class="second_row mdl-cell-align-center">
-              <select id="facility_selection">
+              <select id="equipment_selection">
                 <option selected disabled value="disabled">Search by research equipment</option>
+                {% for obj in equipment %}
+                  <option value="{{ obj.name }}">{{ obj.name }}</option>
+                {% endfor %}
               </select>
             </td>
           </tr>
@@ -72,19 +75,11 @@
       </div>
     </div>
   </section>
-  <section class="mdl-section">
-    <div class="mdl-grid mdl-layout__centered">
-      <div class="mdl-cell--4-col">
-      </div>
-      <div class="mdl-cell--4-col">
-      </div>
-      <div class="mdl-cell--4-col">
-      </div>
-    </section>
     <section class="mdl-section">
       <div class="mdl-grid mdl-layout__centered">
         <div class="mdl-cell--12-col">
-          <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate loadbar"></div>
+          <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate loadbar" style="text-align: center;"></div>
+          <div id="message" style="text-align: center;">No results yet..</div>
           <div id="data_results"></div>
         </div>
       </div>
