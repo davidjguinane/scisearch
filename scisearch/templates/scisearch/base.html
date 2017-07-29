@@ -21,6 +21,7 @@
 		<!-- FONT -->
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="{% static 'query/js/query.js' %}"></script>
 		{% block scripts %}{% endblock %}
 	</head>
 	<body>
@@ -28,19 +29,14 @@
 		{% endblock %}
 		{% block header %}
 		{% endblock %}
-		{% block links %}
-		{% endblock %}
-		{% block tabs %}
-		{% endblock %}
-		{% block drawerlinks %}
-		{% endblock %}
-		{% block tabscontent %}
-		{% endblock %}
-		{% block modal %}
-		{% endblock %}		
-		{% block content %}
-		{% endblock %}
+		<main class="mdl-layout__content">
+			<div class="page-content">
+			{% block content %}
+			{% endblock %}
+		</div>
 		{% block footer %}
 		{% endblock %}
-	</body>
+	</main>
+</div>
+</body>
 </html>

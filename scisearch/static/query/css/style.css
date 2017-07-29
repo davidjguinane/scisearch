@@ -1,5 +1,6 @@
 .mdl-layout__centered {
 	max-width: 900px;
+    margin: auto;
 }
 
 video#bgvid { 
@@ -22,4 +23,9 @@ video#bgvid {
 .mdl-section {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  width: 100%;
+}
+
+#loadbar {
+    display: none;
 }

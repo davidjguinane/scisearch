@@ -14,13 +14,14 @@
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="mdl-layout-title">Scisearch</span>
+        <span class="mdl-layout-title"><i class="material-icons">school</i> Scisearch</span>
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
           <a class="mdl-navigation__link" href="">Home</a>
-          <a class="mdl-navigation__link" href="">Sectors</a>
+          <a class="mdl-navigation__link" href="">Research Fields</a>
+          <a class="mdl-navigation__link" href="">Research Centres</a>
         </nav>
       </div>
     </header>
@@ -28,34 +29,116 @@
       <span class="mdl-layout-title">Scisearch</span>
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="">Home</a>
-        <a class="mdl-navigation__link" href="">Sectors</a>
+        <a class="mdl-navigation__link" href="">Research Fields</a>
+        <a class="mdl-navigation__link" href="">Research Centres</a>
       </nav>
     </div>
   {% endblock %}
   {% block content %}
-    <main class="mdl-layout__content">
-      <div class="page-content">
-        <!--  <section>
-            Want to do specialist research? Find the right facility
-        </section>
-          <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
-      </div> -->
-      <section class="mdl-section mdl-layout__centered">
-        <div class="mdl-grid mdl-layout__centered">
-          <span>Search research facilities</span>
-          <form>
-            <input type="search" name="search" placeholder="Search facility">
-            or select from dropdown
-            <select>
-              {% for obj in queryset %}
-                <option>{{ obj.name }}</option>
-              {% endfor %}
-            </select>
-          </form>
+    <!--  <section>
+      Want to do specialist research? Find the right facility
+    </section>
+    <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+  </div> -->
+  <section class="mdl-section" style="min-height: 100px;
+    background-image: url('/static/query/img/microscope.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;">
+    <div class="mdl-grid mdl-layout__centered">
+      <div class="mdl-cell--6-col mdl-cell-align-center">
+        <h6 style="color: white; font-weight: bold;">Search research centres and specialist research facilities and equipment easily</h6>
+      </div>
+      <div class="mdl-cell--6-col">
+        <table class="select_table">
+          <tr>
+            <th class="first_row mdl-cell-align-center">
+              <select id="sector_selection">
+                <option selected disabled value="disabled">Search by research field</option>
+                {% for obj in queryset %}
+                  <option value="{{ obj.name }}">{{ obj.name }}</option>
+                {% endfor %}
+              </select>
+            </th>
+          </tr>
+          <tr>
+            <td class="second_row mdl-cell-align-center">
+              <select id="facility_selection">
+                <option selected disabled value="disabled">Search by research equipment</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section class="mdl-section">
+    <div class="mdl-grid mdl-layout__centered">
+      <div class="mdl-cell--4-col">
+      </div>
+      <div class="mdl-cell--4-col">
+      </div>
+      <div class="mdl-cell--4-col">
+      </div>
+    </section>
+    <section class="mdl-section">
+      <div class="mdl-grid mdl-layout__centered">
+        <div class="mdl-cell--12-col">
+          <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate loadbar"></div>
+          <div id="data_results"></div>
         </div>
-      </section>
-    </main>
-  </div>
-{% endblock %}
-{% block footer %}
-{% endblock %}
+      </div>
+    </section>
+  {% endblock %}
+  {% block footer %}
+    <footer class="mdl-mega-footer">
+      <div class="mdl-mega-footer__middle-section">
+        <div class="mdl-mega-footer__drop-down-section">
+          <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+          <h1 class="mdl-mega-footer__heading">Features</h1>
+          <ul class="mdl-mega-footer__link-list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Updates</a></li>
+          </ul>
+        </div>
+        <div class="mdl-mega-footer__drop-down-section">
+          <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+          <h1 class="mdl-mega-footer__heading">Details</h1>
+          <ul class="mdl-mega-footer__link-list">
+            <li><a href="#">Specs</a></li>
+            <li><a href="#">Tools</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+        </div>
+        <div class="mdl-mega-footer__drop-down-section">
+          <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+          <h1 class="mdl-mega-footer__heading">Technology</h1>
+          <ul class="mdl-mega-footer__link-list">
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Patterns</a></li>
+            <li><a href="#">Usage</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contracts</a></li>
+          </ul>
+        </div>
+        <div class="mdl-mega-footer__drop-down-section">
+          <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+          <h1 class="mdl-mega-footer__heading">FAQ</h1>
+          <ul class="mdl-mega-footer__link-list">
+            <li><a href="#">Questions</a></li>
+            <li><a href="#">Answers</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mdl-mega-footer__bottom-section">
+        <div class="mdl-logo">Title</div>
+        <ul class="mdl-mega-footer__link-list">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Privacy & Terms</a></li>
+        </ul>
+      </div>
+    </footer>
+  {% endblock %}

@@ -20,8 +20,55 @@ video#bgvid {
     background-size: cover; 
 }
 
+.float-right {
+    float: right;
+}
+
+.mdl-grid-align-center {
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.mdl-cell-align-center {
+  text-align: center;
+}
+
 .mdl-section {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   width: 100%;
+}
+
+.loadbar {
+    display: none;
+}
+
+.demo-card-wide {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+table.select_table {
+    width: 100%;
+}
+
+#sector_selection {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 250px;
+    padding: 4px;
+}
+
+#facility_selection {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 250px;
+    padding: 4px;
+}
+
+option {
+    width: 250px;  
 }
