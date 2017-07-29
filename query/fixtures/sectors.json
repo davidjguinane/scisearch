@@ -1,0 +1,92 @@
+[
+	{
+		"model": "query.sector", 
+		"pk": 1, 
+		"fields": 
+			{"name": "Advanced manufacturing"}
+	},
+	{
+		"model": "query.sector", 
+		"pk": 2, 
+		"fields": 
+			{"name": "Biotechnology"}
+	},
+	{
+		"model": "query.sector", 
+		"pk": 3, 
+		"fields": 
+			{"name": "Defence"}
+	},
+	{
+		"model": "query.sector", 
+		"pk": 4, 
+		"fields": 
+			{"name": "Aviation and space"}
+	},
+	{
+		"model": "query.sector", 
+		"pk": 5, 
+		"fields": 
+			{"name": "Engineering"}
+	},
+	{
+		"model": "query.sector", 
+		"pk": 6, 
+		"fields": 
+			{"name": "Energy"}
+	},	
+	{
+		"model": "query.sector", 
+		"pk": 7, 
+		"fields": 
+			{"name": "Environment and nature"}
+	},
+	{
+		"model": "query.sector", 
+		"pk": 8, 
+		"fields": 
+			{"name": "Food and agriculture"}
+	},
+	{
+		"model": "query.sector", 
+		"pk": 9, 
+		"fields": 
+			{"name": "Health and medical"}
+	},
+	{
+		"model": "query.sector", 
+		"pk": 10, 
+		"fields": 
+			{"name": "Life sciences"}
+	},
+	{
+		"model": "query.sector", 
+		"pk": 11, 
+		"fields": 
+			{"name": "Mining/resources"}
+	},
+	{
+		"model": "query.sector", 
+		"pk": 12, 
+		"fields": 
+			{"name": "ICT and multimedia"}
+	},
+		{
+		"model": "query.sector", 
+		"pk": 13, 
+		"fields": 
+			{"name": "Social sciences"}
+	},
+	{
+		"model": "query.sector", 
+		"pk": 14, 
+		"fields": 
+			{"name": "Transport"}
+	},
+	{
+		"model": "query.sector", 
+		"pk": 15, 
+		"fields": 
+			{"name": "Tropical"}
+	}
+]

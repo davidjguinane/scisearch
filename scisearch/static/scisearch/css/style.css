@@ -1,0 +1,9 @@
+.mdl-layout__centered {
+  max-width: 900px;
+  margin: auto;  
+}
+
+.mdl-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}

@@ -1,0 +1,61 @@
+{% extends "scisearch/base.html" %}
+{% load static %}
+{% block title %}
+{% endblock %}
+{% block meta %}
+{% endblock %}
+{% block script %}
+{% endblock %}
+{% block fab %}
+{% endblock %}
+{% block header %}
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Scisearch</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="">Home</a>
+          <a class="mdl-navigation__link" href="">Sectors</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Scisearch</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Home</a>
+        <a class="mdl-navigation__link" href="">Sectors</a>
+      </nav>
+    </div>
+  {% endblock %}
+  {% block content %}
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <!--  <section>
+            Want to do specialist research? Find the right facility
+        </section>
+          <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+      </div> -->
+      <section class="mdl-section mdl-layout__centered">
+        <div class="mdl-grid mdl-layout__centered">
+          <span>Search research facilities</span>
+          <form>
+            <input type="search" name="search" placeholder="Search facility">
+            or select from dropdown
+            <select>
+              {% for obj in queryset %}
+                <option>{{ obj.name }}</option>
+              {% endfor %}
+            </select>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+{% endblock %}
+{% block footer %}
+{% endblock %}
