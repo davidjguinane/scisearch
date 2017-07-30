@@ -67,7 +67,7 @@ Navigate to the directory that contains `requirements.txt`, and run:
 
 ### Who do I talk to? ###
 
-The repository owner is David Guinane. Contact david.j.guinanee@gmail.com. The secondary contact is Sam Gorle. Contact xxx.@mail.com 
+The repository owner is David Guinane. Contact david.j.guinanee@gmail.com.
 
 ### Install initial data using fixtures ###
 
