@@ -1,0 +1,93 @@
+{% extends "scisearch/base.html" %}
+{% load static %}
+{% block title %}
+{% endblock %}
+{% block meta %}
+{% endblock %}
+{% block script %}
+{% endblock %}
+{% block fab %}
+{% endblock %}
+{% block header %}
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title"><i class="material-icons">school</i><span style="font-size: 24px;"> SciSearch</span></span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="{% url 'query:home' %}">Home</a>
+          <a class="mdl-navigation__link" href="">Research Fields</a>
+          <a class="mdl-navigation__link" href="{% url 'query:resource' %}">Resources</a>
+          <a class="mdl-navigation__link" href="{% url 'query:home' %}">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Scisearch</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="{% url 'query:home' %}">Home</a>
+        <a class="mdl-navigation__link" href="">Research Fields</a>
+          <a class="mdl-navigation__link" href="{% url 'query:resource' %}">Resources</a>
+          <a class="mdl-navigation__link" href="{% url 'query:home' %}">Contact</a>
+      </nav>
+    </div>
+  {% endblock %}
+  {% block content %}
+    <section class="mdl-section">
+      <div class="mdl-grid mdl-layout__centered">
+        <div class="mdl-cell--12-col">
+          <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Research Fields</h2>
+            </div>
+            <div id="infocard" class="mdl-card__supporting-text">
+              <span class="mdl-font__heading">Advanced manufacturing</span>
+              <p>This field of study involves the design for manufacture, manufacturing techniques and systems, implemented to deliver materials, products and devices from laboratories to commercial production. Advanced manufacturing technology can be implemented by businesses to improve both productivity and a competitive edge in the marketplace, including 3D printing, carbon fibre, design-led innovation and more.</p>
+              <span class="mdl-font__heading">Biotechnology</span>
+              <p>Biotechnology combines numerous areas including molecular genetics, microbiology, immunology, physics, mathematics, chemistry and engineering. Within this field of study you will examine microorganisms, plants and animals to understand, discover and improve feasible products and activities.</p>
+              <span class="mdl-font__heading">Defence</span>
+              <p>Studies within this field will equip you with the ability to build and forge relationships between Defence departments and industries, improve collective knowledge of the sector and educate industry on Defence policies and systems, as well as develop further in leadership, military communication, field craft, military justice and training in weapons and physical training, and equity and diversity training.</p>
+              <span class="mdl-font__heading">Aviation and space</span>
+              <p>With aviation and future space travel a growing industry, this field will provide you with a broad overall understanding of the industry and detailed knowledge, attitudes and skill set, whether this includes operations, scheduling, human resources, airport or airline operations. Space scientists explore our universe from the upper atmosphere of Earth to distant regions, our solar system and practice use of space, to better appreciate the environment that space vehicles must operate.</p>
+              <span class="mdl-font__heading">Engineering</span>
+              <p>Engineering studies are designed to develop both knowledge and skills required to undertake a number of problem solving careers across a range of industries and government sectors including but not limited to electrical and aerospace engineering, mechanical, process or civil and construction.</p>
+              <span class="mdl-font__heading">Energy</span>
+              <p>Energy programs are designed to tackle and address the transition to more affordable, reliable and sustainable energies. You will gain a deeper understanding of energy systems and considerate business practices to mitigate the global threat of temperature rises and climate change impacts and understand the complex nature of energy generation, distribution, regulation for energy project management and sustainability.</p>
+              <span class="mdl-font__heading">Environment and nature</span>
+              <p>Environment and nature studies involves the study of land resources, hydrogeology, environmental geology, biogeochemistry, geographic information systems, systems modeling and sustainable management. You will study issues such as climate change, air, water and soil quality and water resources.</p>
+              <span class="mdl-font__heading">Food and agriculture</span>
+              <p>Food and agriculture degrees divulge into food science and business aspects of supplying affordable, wholesome food to an increasing global population and study production and management of food with attention on sustainability. Agribusiness involves food production, by-products of farming and solutions to deliver food to consumers including preservation and storage, processing, manufacturing, transport and logistics, sales and promotion.</p>
+              <span class="mdl-font__heading">Health and medical</span>
+              <p>Health and medical studies address major health issues prevalent in society’s around the world and includes the assessment of new theories, treatments and diagnostic technologies to implement alongside dealing with patients.</p>
+              <span class="mdl-font__heading">Life sciences</span>
+              <p>Life sciences involves the scientific study of living organisms including microorganisms, plants, humans and animals, down to anatomy and genetic levels. Life science studies improve the quality and standard of life and have real life applications within health, agriculture, medicine, pharmaceutical and food science industries.</p>
+              <span class="mdl-font__heading">Mining/resources</span>
+              <p>From water management, building sustainable communities and saving energy, this field of study will provide you with the ability to conduct research and consultancy services revolving around resource discovery and exploitation. More specifically, this industry involves the research, study, extraction and production of natural resources into energy or materials needed in products such as steel.</p>
+              <span class="mdl-font__heading">ICT and multimedia</span>
+              <p>Employment opportunities within this industry after completion of a technology and multimedia course is high, including software engineers or programmers, systems analyst and administration, ICT support and more. You will gain a high level of technical expertise and an ability to understand, learn and engage in emerging technologies.</p>
+              <span class="mdl-font__heading">Social sciences</span>
+              <p>Social sciences involves the study of anthropology, criminology, economics, history, human ecology and services, public relations, psychology, demography, political science, criminology and more. Graduates will be equipped with a skillset to enable creative and critical thinking, effective written and oral communication, cross-cultural awareness, social research skills and more.</p>
+              <span class="mdl-font__heading">Transport</span>
+              <p>This study involves understanding core concepts in the planning and delivery of public transport, whether this be in the field of aviation, supply chain or logistics. </p>
+              <span class="mdl-font__heading">Tropical</span>
+              <p>With a number of current and emerging health problems in developing countries and travellers, this field of study focuses broadly on tropical health issues and clinical tropical medicine. Courses will cover specific tropical diseases and detailed case studies involving the diagnosis, treatment and implementation of preventive control measures, as well as advances in diagnostic methodologies and human behaviour regarding the transmission of infection.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    {% endblock %}
+    {% block footer %}
+      <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+          <div class="mdl-logo">SciSearch</div>
+          <ul class="mdl-mini-footer__link-list">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Privacy & Terms</a></li>
+          </ul>
+        </div>
+      </footer>
+    {% endblock %}

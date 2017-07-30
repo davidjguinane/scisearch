@@ -1,3 +1,7 @@
+.mdl-font__heading {
+  font-weight: 700;
+}
+
 .mdl-layout__centered {
 	max-width: 900px;
     margin: auto;

@@ -1,0 +1,275 @@
+{% extends "scisearch/base.html" %}
+{% load static %}
+{% block title %}
+{% endblock %}
+{% block meta %}
+{% endblock %}
+{% block script %}
+{% endblock %}
+{% block fab %}
+{% endblock %}
+{% block header %}
+	<!-- Always shows a header, even in smaller screens. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<!-- Title -->
+				<span class="mdl-layout-title"><i class="material-icons">school</i><span style="font-size: 24px;"> SciSearch</span></span>
+				<!-- Add spacer, to align navigation to the right -->
+				<div class="mdl-layout-spacer"></div>
+				<!-- Navigation. We hide it in small screens. -->
+				<nav class="mdl-navigation mdl-layout--large-screen-only">
+					<a class="mdl-navigation__link" href="{% url 'query:home' %}">Home</a>
+					<a class="mdl-navigation__link" href="{% url 'query:research' %}">Research Fields</a>
+					<a class="mdl-navigation__link" href="{% url 'query:resource' %}">Resources</a>
+					<a class="mdl-navigation__link" href="{% url 'query:home' %}">Contact</a>
+				</nav>
+			</div>
+		</header>
+		<div class="mdl-layout__drawer">
+			<span class="mdl-layout-title">Scisearch</span>
+			<nav class="mdl-navigation">
+				<a class="mdl-navigation__link" href="{% url 'query:home' %}">Home</a>
+				<a class="mdl-navigation__link" href="{% url 'query:research' %}">Research Fields</a>
+				<a class="mdl-navigation__link" href="{% url 'query:resource' %}">Resources</a>
+				<a class="mdl-navigation__link" href="{% url 'query:home' %}">Contact</a>
+			</nav>
+		</div>
+	{% endblock %}
+	{% block content %}
+		<section class="mdl-section">
+			<div class="mdl-grid mdl-layout__centered">
+				<div class="mdl-cell--8-col">
+					<p style="font-weight: 700; font-size: 24px; color: #424242;">Articles</p>
+					<style>
+					.demo-card-wide1.mdl-card {
+					max-width: 512px;
+					}
+					.demo-card-wide1 > .mdl-card__title {
+					color: #fff;
+					height: 176px;
+					background: url('/static/query/img/professor.jpeg') center / cover;
+					}
+					.demo-card-wide1 > .mdl-card__menu {
+					color: #fff;
+					}
+					</style>
+					<div class="demo-card-wide1 mdl-card mdl-shadow--4dp">
+						<div class="mdl-card__title">
+							<h2 class="mdl-card__title-text">New facility for award winning professor</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							The Research Centre of Evolution opened a new 5000m2 state of the art multi purpose facility that has the ability to further support a number of different disciplines studied at the Centre, including biology and chemistry.
+						</div>
+						<div class="mdl-card__actions mdl-card--border">
+							<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+								Read more
+							</a>
+						</div>
+						<div class="mdl-card__menu">
+							<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+							<i class="material-icons">share</i>
+							</button>
+						</div>
+					</div>
+					<style>
+					.demo-card-wide2.mdl-card {
+					max-width: 512px;
+					}
+					.demo-card-wide2 > .mdl-card__title {
+					color: #fff;
+					height: 176px;
+					background: url('/static/query/img/space.jpg') center / cover;
+					}
+					.demo-card-wide2 > .mdl-card__menu {
+					color: #fff;
+					}
+					</style>
+					<div class="demo-card-wide2 mdl-card mdl-shadow--4dp">
+						<div class="mdl-card__title">
+							<h2 class="mdl-card__title-text">New aviation and space research facility</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							The University of Queensland has recently expanded its Aviation and Space diploma’s, in a move to cater for future demand.
+						</div>
+						<div class="mdl-card__actions mdl-card--border">
+							<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+								Read more
+							</a>
+						</div>
+						<div class="mdl-card__menu">
+							<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+							<i class="material-icons">share</i>
+							</button>
+						</div>
+					</div>
+					<style>
+					.demo-card-wide3.mdl-card {
+					max-width: 512px;
+					}
+					.demo-card-wide3 > .mdl-card__title {
+					color: #fff;
+					height: 176px;
+					background: url('/static/query/img/facility.jpg') center / cover;
+					}
+					.demo-card-wide3 > .mdl-card__menu {
+					color: #fff;
+					}
+					</style>
+					<div class="demo-card-wide3 mdl-card mdl-shadow--4dp">
+						<div class="mdl-card__title">
+							<h2 class="mdl-card__title-text">Application for Imaging facilities</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							Development applications have been lodged for 2 new Imaging and MRI facilities in Brisbane. During the bi-annual Brisbane City Science Night, discussions were held with local University representatives to organise an agreement for practical experience for their students. 
+						</div>
+						<div class="mdl-card__actions mdl-card--border">
+							<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+								Read more
+							</a>
+						</div>
+						<div class="mdl-card__menu">
+							<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+							<i class="material-icons">share</i>
+							</button>
+						</div>
+					</div>
+					<style>
+					.demo-card-wide4.mdl-card {
+					max-width: 512px;
+					}
+					.demo-card-wide4 > .mdl-card__title {
+					color: #fff;
+					height: 176px;
+					background: url('/static/query/img/microscope.png') center / cover;
+					}
+					.demo-card-wide4 > .mdl-card__menu {
+					color: #fff;
+					}
+					</style>
+					<div class="demo-card-wide4 mdl-card mdl-shadow--4dp">
+						<div class="mdl-card__title">
+							<h2 class="mdl-card__title-text">Uni gets better medical facilities</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							The School of Nursing and Midwifery at Central Queensland University has expanded further into their investment of life-like latex masks in order to stimulate and prep future medical professionals for real life scenarios.
+						</div>
+						<div class="mdl-card__actions mdl-card--border">
+							<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+								Read more
+							</a>
+						</div>
+						<div class="mdl-card__menu">
+							<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+							<i class="material-icons">share</i>
+							</button>
+						</div>
+					</div>
+					<style>
+					.demo-card-wide5.mdl-card {
+					max-width: 512px;
+					}
+					.demo-card-wide5 > .mdl-card__title {
+					color: #fff;
+					height: 176px;
+					background: url('/static/query/img/development.jpg') center / cover;
+					}
+					.demo-card-wide5 > .mdl-card__menu {
+					color: #fff;
+					}
+					</style>
+					<div class="demo-card-wide5 mdl-card mdl-shadow--4dp">
+						<div class="mdl-card__title">
+							<h2 class="mdl-card__title-text">New $80 million facility in Gold Coast</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							A new $80 million research facility in the Gold Coast will use high-power microscopes, in what they say will transform the way molecular research is undertaken in the country.
+						</div>
+						<div class="mdl-card__actions mdl-card--border">
+							<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+								Read more
+							</a>
+						</div>
+						<div class="mdl-card__menu">
+							<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+							<i class="material-icons">share</i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="mdl-cell--4-col">
+				<p style="font-weight: 700; font-size: 18px; color: #424242;">Filter articles</p>
+				<p style="font-weight: 700; font-size: 16px; color: #424242;">Month</p>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+					<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">January</span>
+				</label>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+					<input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">February</span>
+				</label>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
+					<input type="checkbox" id="checkbox-3" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">March</span>
+				</label>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
+					<input type="checkbox" id="checkbox-4" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">April</span>
+				</label>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-5">
+					<input type="checkbox" id="checkbox-5" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">May</span>
+				</label>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-6">
+					<input type="checkbox" id="checkbox-6" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">June</span>
+				</label>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-7">
+					<input type="checkbox" id="checkbox-7" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">July</span>
+				</label>
+				<p></p>
+				<p style="font-weight: 700; font-size: 16px; color: #424242;">Subject</p>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-8">
+					<input type="checkbox" id="checkbox-8" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">Engineering</span>
+				</label>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-9">
+					<input type="checkbox" id="checkbox-9" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">Medicine</span>
+				</label>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-10">
+					<input type="checkbox" id="checkbox-10" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">Aviation</span>
+				</label>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-11">
+					<input type="checkbox" id="checkbox-11" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">Biotechnology</span>
+				</label>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-12">
+					<input type="checkbox" id="checkbox-12" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">Environment</span>
+				</label>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-13">
+					<input type="checkbox" id="checkbox-13" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">Agriculture</span>
+				</label>
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-14">
+					<input type="checkbox" id="checkbox-14" class="mdl-checkbox__input">
+					<span class="mdl-checkbox__label">Transport</span>
+				</label>
+			</div>
+			</div>
+		</section>
+	{% endblock %}
+	{% block footer %}
+		<footer class="mdl-mini-footer">
+			<div class="mdl-mini-footer__left-section">
+				<div class="mdl-logo">SciSearch</div>
+				<ul class="mdl-mini-footer__link-list">
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Privacy & Terms</a></li>
+				</ul>
+			</div>
+		</footer>
+	{% endblock %}

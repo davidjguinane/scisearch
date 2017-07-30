@@ -114,7 +114,7 @@ $( document ).ready(function() {
 	function request_data($name) {
 		$.ajax({
 			type: "POST",
-			url: '/select_sector/',
+			url: '/data/',
             data: { 
                 'sector' : $name,
                 'csrfmiddlewaretoken': csrftoken,

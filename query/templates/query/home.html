@@ -20,8 +20,9 @@
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
            <a class="mdl-navigation__link" href="{% url 'query:home' %}">Home</a>
-          <a class="mdl-navigation__link" href="">Research Fields</a>
-          <a class="mdl-navigation__link" href="">Research Centres</a>
+          <a class="mdl-navigation__link" href="{% url 'query:research' %}">Research Fields</a>
+          <a class="mdl-navigation__link" href="{% url 'query:resource' %}">Resources</a>
+          <a class="mdl-navigation__link" href="{% url 'query:home' %}">Contact</a>
         </nav>
       </div>
     </header>
@@ -29,8 +30,9 @@
       <span class="mdl-layout-title">Scisearch</span>
       <nav class="mdl-navigation">
          <a class="mdl-navigation__link" href="{% url 'query:home' %}">Home</a>
-        <a class="mdl-navigation__link" href="">Research Fields</a>
-        <a class="mdl-navigation__link" href="">Research Centres</a>
+        <a class="mdl-navigation__link" href="{% url 'query:research' %}">Research Fields</a>
+          <a class="mdl-navigation__link" href="{% url 'query:resource' %}">Resources</a>
+          <a class="mdl-navigation__link" href="{% url 'query:home' %}">Contact</a>
       </nav>
     </div>
   {% endblock %}
@@ -79,7 +81,7 @@
       <div class="mdl-grid mdl-layout__centered">
         <div class="mdl-cell--12-col">
           <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate loadbar" style="text-align: center;"></div>
-          <div id="message" style="text-align: center;">No results yet..</div>
+          <div id="message" style="text-align: center;">No search results yet..</div>
           <div id="data_results"></div>
         </div>
       </div>
@@ -102,7 +104,6 @@
           <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
           <h1 class="mdl-mega-footer__heading">Details</h1>
           <ul class="mdl-mega-footer__link-list">
-            <li><a href="#">Specs</a></li>
             <li><a href="#">Tools</a></li>
             <li><a href="#">Resources</a></li>
           </ul>
@@ -112,10 +113,8 @@
           <h1 class="mdl-mega-footer__heading">Technology</h1>
           <ul class="mdl-mega-footer__link-list">
             <li><a href="#">How it works</a></li>
-            <li><a href="#">Patterns</a></li>
             <li><a href="#">Usage</a></li>
             <li><a href="#">Products</a></li>
-            <li><a href="#">Contracts</a></li>
           </ul>
         </div>
         <div class="mdl-mega-footer__drop-down-section">
@@ -129,10 +128,9 @@
         </div>
       </div>
       <div class="mdl-mega-footer__bottom-section">
-        <div class="mdl-logo">Title</div>
+        <div class="mdl-logo">SciSearch</div>
         <ul class="mdl-mega-footer__link-list">
           <li><a href="#">Help</a></li>
-          <li><a href="#">Privacy & Terms</a></li>
         </ul>
       </div>
     </footer>

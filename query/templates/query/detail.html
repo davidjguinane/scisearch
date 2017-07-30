@@ -20,8 +20,9 @@
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
           <a class="mdl-navigation__link" href="{% url 'query:home' %}">Home</a>
-          <a class="mdl-navigation__link" href="">Research Fields</a>
-          <a class="mdl-navigation__link" href="">Research Centres</a>
+          <a class="mdl-navigation__link" href="{% url 'query:research' %}">Research Fields</a>
+          <a class="mdl-navigation__link" href="{% url 'query:home' %}">Resources</a>
+          <a class="mdl-navigation__link" href="{% url 'query:home' %}">Contact</a>
         </nav>
       </div>
     </header>
@@ -29,8 +30,9 @@
       <span class="mdl-layout-title">Scisearch</span>
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="{% url 'query:home' %}">Home</a>
-        <a class="mdl-navigation__link" href="">Research Fields</a>
-        <a class="mdl-navigation__link" href="">Research Centres</a>
+        <a class="mdl-navigation__link" href="{% url 'query:research' %}">Research Fields</a>
+          <a class="mdl-navigation__link" href="{% url 'query:home' %}">Resources</a>
+          <a class="mdl-navigation__link" href="{% url 'query:home' %}">Contact</a>
       </nav>
     </div>
   {% endblock %}
@@ -43,17 +45,17 @@
               <h2 class="mdl-card__title-text">{{ centrename }} ({{ abbreviation }})</h2>
             </div>
             <div id="infocard" class="mdl-card__supporting-text">
-              <span style="font-weight: 700;">Address</span>
+              <span class="mdl-font__heading">Address</span>
               <p>{{ address }}</p>
-              <span style="font-weight: 700;">Website</span>
+              <span class="mdl-font__heading">Website</span>
               <p><a href="{{ weblink }}">{{ weblink }}</a></p>
-            <span style="font-weight: 700;">Overview</b></p>
+            <span class="mdl-font__heading">Overview</b></p>
             <p> {{ overview }}</p>
-            <span style="font-weight: 700;">Facilities & Major Equipment</span>
+            <span class="mdl-font__heading">Facilities & Major Equipment</span>
             <p>{{ facilities }}</p>
-            <span style="font-weight: 700;">Key Science Sectors</span>
+            <span class="mdl-font__heading">Key Science Sectors</span>
             <p> </p>
-            <span style="font-weight: 700;">Research Staff</span>
+            <span class="mdl-font__heading">Research Staff</span>
             <p> </p>
           </div>
         </div>
@@ -61,4 +63,13 @@
     </section>
   {% endblock %}
   {% block footer %}
+  <footer class="mdl-mini-footer">
+  <div class="mdl-mini-footer__left-section">
+    <div class="mdl-logo">SciSearch</div>
+    <ul class="mdl-mini-footer__link-list">
+      <li><a href="#">Help</a></li>
+      <li><a href="#">Privacy & Terms</a></li>
+    </ul>
+  </div>
+</footer>
   {% endblock %}

@@ -19,7 +19,7 @@ class Home(View):
 		}
 		return render(request, template_name, context)
 
-def get_sector(request):
+def get_data(request):
 
 	if request.method == 'POST':
 		if request.is_ajax():
@@ -30,7 +30,7 @@ def get_sector(request):
 			#print(response)
 			return HttpResponse(json.dumps(response))
 
-def detail_view(request, pk):
+def detailView(request, pk):
 
 	if request.method == 'GET':
 		template_name = 'query/detail.html'
@@ -53,3 +53,15 @@ def detail_view(request, pk):
 			'weblink' : weblink,
 			}
 		return render(request, template_name, context)
+
+class ResearchView(View):
+
+	def get(self, request, *args, **kwargs):
+		template_name = 'query/research.html'
+		return render(request, template_name)
+
+class ResourceView(View):
+
+	def get(self, request, *args, **kwargs):
+		template_name = 'query/resource.html'
+		return render(request, template_name)
